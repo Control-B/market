@@ -37,11 +37,11 @@ done
 
 echo "✅ Environment variables look good!"
 
-# Update the app.yaml with your GitHub repo
-echo "📝 Updating app.yaml with your GitHub repository..."
-read -p "Enter your GitHub username: " github_username
-read -p "Enter your GitHub repository name (default: ai-marketplace): " repo_name
-repo_name=${repo_name:-ai-marketplace}
+# Set GitHub repository details
+github_username="Control-B"
+repo_name="market"
+
+echo "📝 Using GitHub repository: $github_username/$repo_name"
 
 # Update the app.yaml file
 sed -i.bak "s/your-username\/ai-marketplace/$github_username\/$repo_name/g" .do/app.yaml
